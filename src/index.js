@@ -1,5 +1,5 @@
-const user = {
-    name: 'Diego'
-}
+import React from 'react'
 
-console.log(user.address?.street)
+export default function main() {
+    return <h1>Olá mundo</h1>
+}
