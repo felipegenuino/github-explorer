@@ -14,7 +14,7 @@ module.exports = {
         filename: 'bundle.js'
     },
     resolve: {
-        extensions: ['.js', '.jsx'],
+        extensions: ['.js', '.jsx', 'ts', 'tsx'],
     },
     devServer: {
         contentBase: path.resolve(__dirname, 'public'),
@@ -23,13 +23,13 @@ module.exports = {
     plugins: [
         isDevelopment && new ReactRefreshWebpackPlugin(),
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, 'public', 'index.html')
+            template: path.resolve(__dirname, 'public', 'index.tsx')
         })
     ].filter(Boolean),
     module: {
         rules: [
             {
-                test: /\.jsx$/,
+                test: /\.(j|t)sx$/,
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
