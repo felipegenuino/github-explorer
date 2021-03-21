@@ -7,7 +7,7 @@ export function App() {
         <>
             <h1>Hello JS </h1>
             <RepositoryList />
-            <Counter />
+            {/* <Counter /> */}
         </>
     )
 }

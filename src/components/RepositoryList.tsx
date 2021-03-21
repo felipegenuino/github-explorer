@@ -21,7 +21,7 @@ export default function RepositoryList() {
                 {
                     repositories.map(
                         repo => (
-                            <RepositoryItem key={repo.id} repository={repo} />
+                            <RepositoryItem key={repo.name} repository={repo} />
                         )
                     )
                 }
